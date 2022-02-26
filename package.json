@@ -1,0 +1,24 @@
+{
+  "name": "file-ez",
+  "description": "A simple async wrapper around fs",
+  "version": "1.0.0",
+  "author": {
+    "name": "AroLeaf",
+    "url": "https://leaf.moe"
+  },
+  "keywords": [
+    "fs",
+    "files",
+    "filesystem"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.js"
+  },
+  "dependencies": {
+    "caller": "^1.0.1"
+  },
+  "types": "./index.d.ts"
+}
