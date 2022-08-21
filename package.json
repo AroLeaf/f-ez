@@ -18,7 +18,10 @@
     "require": "./index.js"
   },
   "dependencies": {
-    "caller": "^1.0.1"
+    "caller": "^1.1.0"
   },
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "devDependencies": {
+    "@types/node": "^17.0.45"
+  }
 }

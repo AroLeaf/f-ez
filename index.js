@@ -5,6 +5,7 @@ const caller = require('caller');
 const url = require('url');
 
 function res(fp) {
+  if (path.isAbsolute(fp)) return fp;
   let callerPath = caller();
   if (callerPath.startsWith('file://')) callerPath = url.fileURLToPath(callerPath);
   return path.resolve(path.dirname(callerPath), fp);
@@ -24,7 +25,7 @@ async function recursive(fp) {
 }
 
 async function _require(fp, full = false) {
-  fp = fp.startsWith('.') ? res(fp): fp;
+  fp = fp.startsWith('.') ? res(fp) : fp;
   const module = await import(fp);
   return full ? module : module.default;
 }
